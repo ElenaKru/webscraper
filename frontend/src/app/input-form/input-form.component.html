@@ -1,0 +1,17 @@
+<div class="container">
+    <h2>Web Crawler Input Form</h2>
+    <form [formGroup]="crawlerForm" (ngSubmit)="submitForm()">
+        <div class="form-group">
+            <label for="url" class="input-label">URL:</label>
+            <input type="url" id="url" class="form-control" placeholder="Enter URL" formControlName="url" required />
+        </div>
+        <div class="form-group">
+            <label for="depth" class="input-label">Crawling Depth:</label>
+            <input type="number" id="depth" class="form-control" placeholder="Enter Crawling Depth"
+                formControlName="depth" required />
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="crawlerForm.invalid">
+            Submit
+        </button>
+    </form>
+</div>

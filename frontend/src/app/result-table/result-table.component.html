@@ -1,0 +1,19 @@
+<div class="container">
+    <h2>Crawler Results</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">URL</th>
+                <th scope="col">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let outcome of crawlerOutcomes; let i = index">
+                <th scope="row">{{ i + 1 }}</th>
+                <td>{{ outcome.url }}www.iamurl.com</td>
+                <td>{{ outcome.status }iamstatusof the URL}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
